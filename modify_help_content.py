@@ -1,4 +1,6 @@
-export const helpContent = {
+import re
+
+help_content_js = """export const helpContent = {
   // Start Node Help
   startNode: {
     title: "help.startNode.title",
@@ -233,3 +235,8 @@ export default {
   getNodeHelp,
   getEdgeHelp
 }
+"""
+
+with open("d:/Project/Code/ChatDev/frontend/src/utils/helpContent.js", "w", encoding="utf-8") as f:
+    f.write(help_content_js)
+print("Updated helpContent.js")
